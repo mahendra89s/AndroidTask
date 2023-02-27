@@ -6,13 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/authorImg"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/authorNameTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        />
     <TextView
+        android:id="@+id/authorNameTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="@string/author_name"
+        app:layout_constraintBottom_toTopOf="@id/authorName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/authorImg"
+        tools:text="Author Name"/>
 
+    <TextView
+        android:id="@+id/authorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/showBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/authorNameTitle"
+        tools:text="Author Name"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/showBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:paddingHorizontal="20dp"
+        android:textColor="@color/white"
+        android:text="@string/show_author"
+        app:layout_constraintTop_toBottomOf="@id/authorName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
